@@ -1,37 +1,46 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
-  .:
-    specifiers: {}
+
+  .: {}
+
   packages/bar:
     dependencies:
-      lodash: 4.17.15
-    specifiers:
-      lodash: '*'
+      lodash:
+        specifier: '*'
+        version: 4.17.15
+
   packages/baz:
     dependencies:
-      typescript: 3.8.3
-    specifiers:
-      typescript: '*'
+      typescript:
+        specifier: '*'
+        version: 3.8.3
+
   packages/foo:
     dependencies:
-      baz: 'link:../baz'
-      underscore: 1.10.2
-    specifiers:
-      baz: '*'
-      underscore: '*'
-lockfileVersion: 5.1
+      baz:
+        specifier: '*'
+        version: link:../baz
+      underscore:
+        specifier: '*'
+        version: 1.10.2
+
 packages:
-  /lodash/4.17.15:
+
+  /lodash@4.17.15:
+    resolution: {integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==}
     dev: false
-    resolution:
-      integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-  /typescript/3.8.3:
-    dev: false
-    engines:
-      node: '>=4.2.0'
+
+  /typescript@3.8.3:
+    resolution: {integrity: sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==}
+    engines: {node: '>=4.2.0'}
     hasBin: true
-    resolution:
-      integrity: sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
-  /underscore/1.10.2:
     dev: false
-    resolution:
-      integrity: sha512-N4P+Q/BuyuEKFJ43B9gYuOj4TQUHXX+j2FqguVOpjkssLUUrnJofCcBccJSCoeturDoZU6GorDTHSvUDlSQbTg==
+
+  /underscore@1.10.2:
+    resolution: {integrity: sha512-N4P+Q/BuyuEKFJ43B9gYuOj4TQUHXX+j2FqguVOpjkssLUUrnJofCcBccJSCoeturDoZU6GorDTHSvUDlSQbTg==}
+    dev: false
